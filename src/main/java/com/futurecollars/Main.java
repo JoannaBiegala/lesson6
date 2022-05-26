@@ -19,7 +19,7 @@ public class Main {
             } else {
                 System.out.println(" Podaj pierwszą liczbę: ");
                 int nr1 = scanner.nextInt();
-                System.out.println(" Podaj pierwszą liczbę: ");
+                System.out.println(" Podaj drugą liczbę: ");
                 int nr2 = scanner.nextInt();
                 System.out.println("Wynik: " + runCalculator(option, nr1, nr2));
             }
@@ -35,10 +35,10 @@ public class Main {
                 return String.valueOf(subtract(nr1, nr2));
 
             case 3:
-                return String.valueOf(multiplication(nr1, nr2));
+                return String.valueOf(multiply(nr1, nr2));
 
             case 4:
-                return division(nr1, nr2);
+                return divide(nr1, nr2);
 
             default:
                 return "Błędnie podana opcja";
@@ -54,12 +54,12 @@ public class Main {
         return nr1 - nr2;
     }
 
-    private static int multiplication(int nr1, int nr2) {
+    private static int multiply(int nr1, int nr2) {
         return nr1 * nr2;
 
     }
 
-    private static String division(int nr1, int nr2) {
+    private static String divide(int nr1, int nr2) {
         if (nr2 == 0) {
             return "Dzielenie przez zero jest niewykonalne";
          } else {
